@@ -38,6 +38,7 @@ def edit(task_id):
         if form.validate_on_submit():
             task.title = form.title.data
             task.color = form.color.data
+            task.text = form.text.data
             task.date = datetime.utcnow()
             db.session.commit()
             flash('Task has been updated')

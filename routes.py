@@ -5,7 +5,6 @@ from models import Task
 from datetime import datetime
 import forms
 
-# CHOICES = [('primary', 'bg-primary text-white'), ('secondary', 'bg-secondary text-white'), ('success', 'bg-success text-white'), ('danger', 'bg-danger text-white'), ('warning', 'bg-warning'), ('info', 'bg-info'), ('light', 'bg-light'), ('dark', 'bg-dark text-white')]
 CHOICES = {'primary': 'bg-primary text-white', 'secondary': 'bg-secondary text-white', 'success': 'bg-success text-white', 'danger': 'bg-danger text-white', 'warning': 'bg-warning', 'info': 'bg-info', 'light': 'bg-light', 'dark': 'bg-dark text-white'}
 
 
@@ -68,4 +67,3 @@ def delete(task_id):
 
     flash('Task not found!')
     return redirect(url_for('index'))
-

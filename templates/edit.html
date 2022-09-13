@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div class="container-fluid">
+  <form action="{{ url_for('edit', task_id=task_id) }}" method="post">
+    {{ form.csrf_token }}
+    <div class="row mx-auto">
+      <h3>Edit Task</h3>
+      <div class="col-8">
+        {{ form.title.label }}
+        {{ form.title(class="form-control mb-4") }}
+        {{ form.text.label }}
+        {{ form.text(class="form-control mb-4") }}
+        {{ form.color.label }}
+        {{ form.color(class="form-control mb-4") }}
+        {{ form.submit(class="btn btn-primary") }}
+      </div>
+    </div>
+  </form>
+</div>
+{% endblock %}
